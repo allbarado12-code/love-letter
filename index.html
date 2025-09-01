@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Will You Marry Me?</title>
+    <style>
+        body {
+            background: #ffe6f2;
+            font-family: 'Segoe Script', 'Comic Sans MS', cursive, sans-serif;
+            color: #d6336c;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            max-width: 500px;
+            margin: 60px auto;
+            background: #fff0f6;
+            border-radius: 18px;
+            box-shadow: 0 0 30px #d6336c44;
+            padding: 40px 30px;
+            text-align: center;
+            position: relative;
+        }
+        h1 {
+            font-size: 2.2em;
+            margin-bottom: 10px;
+        }
+        .heart {
+            font-size: 3em;
+            color: #ff69b4;
+            margin-bottom: 20px;
+            animation: heartbeat 1s infinite;
+        }
+        @keyframes heartbeat {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.2); }
+        }
+        .letter {
+            font-size: 1.2em;
+            margin-bottom: 30px;
+            line-height: 1.6;
+        }
+        .question {
+            font-size: 1.4em;
+            margin-bottom: 20px;
+            font-weight: bold;
+        }
+        .btn-yes {
+            background: #d6336c;
+            color: #fff;
+            border: none;
+            border-radius: 8px;
+            padding: 12px 38px;
+            font-size: 1.2em;
+            font-family: inherit;
+            cursor: pointer;
+            margin-right: 10px;
+            box-shadow: 0 2px 8px #d6336c88;
+            transition: background 0.2s;
+        }
+        .btn-yes:hover {
+            background: #ff69b4;
+        }
+        .btn-no {
+            background: #fff0f6;
+            color: #d6336c;
+            border: 1px solid #fff0f6;
+            border-radius: 8px;
+            padding: 12px 38px;
+            font-size: 1.2em;
+            font-family: inherit;
+            margin-left: 10px;
+            opacity: 0.4;
+            cursor: not-allowed;
+            pointer-events: none;
+        }
+        .response {
+            font-size: 1.3em;
+            margin-top: 30px;
+            color: #d6336c;
+            font-weight: bold;
+        }
+        /* Heart SVG design */
+        .svg-heart {
+            width: 80px;
+            height: 80px;
+            display: block;
+            margin: 0 auto 20px auto;
+        }
+        .svg-heart path {
+            fill: #ff69b4;
+            stroke: #d6336c;
+            stroke-width: 2;
+            filter: drop-shadow(0 0 8px #ff69b4);
+            animation: heartbeat 1s infinite;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="heart">❤️</div>
+        <svg class="svg-heart" viewBox="0 0 100 90">
+            <path d="M10,30 
+                     A20,20 0 0,1 50,30 
+                     A20,20 0 0,1 90,30 
+                     Q90,60 50,85 
+                     Q10,60 10,30 Z"/>
+        </svg>
+        <h1>To My Dearest Althea Celine San Agustin</h1>
+        <div class="letter">
+            My love,<br><br>
+            Every moment with you feels like a beautiful dream come true. Your smile brightens my days, and your laughter fills my heart with joy. I am grateful for your love, your kindness, and your unwavering support.<br><br>
+            I want to spend the rest of my life making you happy, cherishing you, and loving you more each day.<br><br>
+            Will you marry me?
+        </div>
+        <div class="question">Will you marry me?</div>
+        <button class="btn-yes" onclick="showResponse()">Yes</button>
+        <button class="btn-no">No</button>
+        <div id="response" class="response"></div>
+    </div>
+    <script>
+        function showResponse() {
+            document.getElementById('response').innerText = "You said YES! I love you forever, Althea 💍";
+        }
+    </script>
+</body>
